@@ -1,0 +1,115 @@
+*,html,body{
+
+  box-sizing: border-box;
+}
+
+
+
+html{
+  height: 100vh;
+}
+body{
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  
+  
+
+}
+
+div{
+
+  background-color: rgb(251, 218, 179);
+  width: 25rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 7px;
+  border:none;
+  box-shadow: 0 .5rem .5rem .2rem #595959;
+  
+  
+
+}
+
+div input:nth-child(1){
+
+  width: 55%;
+  height: 60%;
+  border-radius: 7px;
+  padding-left: 2rem;
+ border-color: rgb(188, 188, 254);
+ transition: border .5s ease-in-out;
+
+}
+
+div input:nth-child(2){
+
+  width: 35%;
+  height: 60%;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(188, 188, 254);
+  color: white;
+  transition: background-color .5s ease-in-out;
+  transition: transform .2s ease-in-out;
+
+  
+}
+
+
+div:focus-within input[type="email"]:focus{
+border-bottom-color: blue;
+border-right-color: blue;
+
+border-width: 2.2px;
+outline: none;
+
+
+}
+
+div:focus-within { 
+  
+  animation: bouncer  1s cubic-bezier(0.51, 0.26, 0.19, 1.43);
+  animation-fill-mode: both;
+  
+  
+  }
+
+div:focus-within input[type="button"]{
+
+  background-color: blue;
+
+}
+
+
+
+div:focus-within input[type="button"]:hover{
+  background-color: rgb(2, 2, 115);
+ 
+}
+
+
+@keyframes bouncer {
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+        transform: translateY(5vh);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+  
+}
+
+div input[type="email"] ~ input[type="button"]:active{
+  transform: scale(1.05);
+ 
+}
